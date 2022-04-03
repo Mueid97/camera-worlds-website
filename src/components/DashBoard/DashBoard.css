@@ -1,0 +1,5 @@
+.chart{
+    display: flex;
+    gap: 50px;
+    margin: 150px 40px;
+}

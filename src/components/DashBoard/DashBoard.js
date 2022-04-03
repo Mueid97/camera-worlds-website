@@ -1,9 +1,12 @@
 import React from 'react';
-
+import AreaCharts from '../Chart/AreaCharts';
+import CustomCharts from '../Chart/CustomCharts';
+import './DashBoard.css'
 const DashBoard = () => {
     return (
-        <div>
-            <h1>This is DeshBoard</h1>
+        <div className='chart'>
+            <AreaCharts></AreaCharts>
+            <CustomCharts></CustomCharts>
         </div>
     );
 };

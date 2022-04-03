@@ -1,11 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import image from '../images/cam2.jpg';
 import Product from '../Product/Product';
 import './Home.css'
 const Home = () => {
     const [products, setProducts] = useProducts([]);
-    
+    let navigate = useNavigate();
     return (
         <div>
             <div className='home-section'>
@@ -28,7 +29,7 @@ const Home = () => {
                 }
             </div>
             <div className='btn'>
-                <button className='review-btn'>Customer Reviews</button>
+                <button className='review-btn' onClick={()=>navigate('/reviews')}>Customer Reviews</button>
             </div>
 
         </div>
