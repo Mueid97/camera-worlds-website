@@ -22,7 +22,7 @@ const Home = () => {
             <h1 className='customer-title'>Customer Reviews</h1>
             <div className='products-item'>
                 {
-                    products.map(product => <Product
+                    products.slice(0,3).map(product => <Product
                         key={product.id}
                         product={product}
                     ></Product>)
