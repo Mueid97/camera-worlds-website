@@ -5,7 +5,7 @@ const Blogs = () => {
         <div className='blogs-section'>
             <div className='context-api'>
                 <h1>What is Contect Api?</h1>
-                <p>Context API is the way to create global variables that can be passed around the component tree. Context API is an alternative to passing props manually in a component tree. Something that is also called Prop drilling. The React Context API is a way for a React app to effectively produce global variables that can be passed around. </p>
+                <p>Context API is the way to create global variables that can be passed around the component tree. Context API is an alternative to passing props manually in a component tree. Something that is also called Prop drilling. The React Context API is a way for a React app to effectively produce global variables that can be passed around. React Context is a way to manage state globally. </p>
             </div>
             <div className='symentric tag'>
                 <h1>What is Semantic tags?</h1>
