@@ -5,13 +5,19 @@ import image from '../../images/cam2-removebg-preview.png';
 import Footer from '../Footer/Footer';
 import Product from '../Product/Product';
 import './Home.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { useEffect } from 'react';
 const Home = () => {
     const [products, setProducts] = useProducts([]);
     let navigate = useNavigate();
+    useEffect(()=>{
+        AOS.init({duration: 3000});
+    },[])
     return (
         <div>
             <div className='lg:px-24 '>
-                <div class="hero min-h-screen">
+                <div data-aos="slide-down" class="hero min-h-screen">
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         <img src={image} class="max-w-sm rounded-lg" alt='' />
                         <div>
@@ -22,7 +28,7 @@ const Home = () => {
                     </div>
                 </div>
                 <h1 className='text-center text-bold text-success text-4xl mb-10'>Customer Reviews</h1>
-                <div className='grid sm:grid-cols-1 lg:grid-cols-3 gap-10 mb-10'>
+                <div data-aos="zoom-in-up" className='grid sm:grid-cols-1 lg:grid-cols-3 gap-10 mb-10'>
                     {
                         products.slice(0, 3).map(product => <Product
                             key={product.id}
